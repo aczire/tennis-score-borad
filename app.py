@@ -1,6 +1,6 @@
 #
 # Copyright 2020-2021 AdventureWorks, Inc. or its affiliates. All Rights Reserved.
-# This file is licensed under the Crowdblink License, Version 1.0 (the "License").
+# This file is licensed under the AdventureWorks License, Version 1.0 (the "License").
 # You may not use this file except in compliance with the License. A copy of
 # the License is located at http://aws.adventureworks.com/license/
 # This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
@@ -163,7 +163,7 @@ class TennisScoringBoard:
         elif points == 4:
             return "Game"
         else:
-            return ""
+            raise ValueError("Invalid value!")
 
 
 # Example usage: Start with two player, assuming singles; later onto doubles.
