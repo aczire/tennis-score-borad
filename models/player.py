@@ -7,22 +7,26 @@
 # CONDITIONS OF ANY KIND, either express or implied. See the License for the
 # specific language governing permissions and limitations under the License.
 #
+
 """
-Module to handle tennis scoring
+Represents a player in the game.
 """
-import logging
+# Generated file, disable docstrings, casing, module length requirements.
+# pylint: disable=C0115,C0116,C0103,C0302
 
-from models.player import Player
-from match import Match
+from dataclasses import dataclass
 
-log = logging.getLogger(__name__)
 
-PLAYER_ONE = "Player One"
-PLAYER_TWO = "Player Two"
-player1 = Player(PLAYER_ONE)
-player2 = Player(PLAYER_TWO)
+@dataclass
+class Player:
+    """Represents a player in the game."""
+    name: str
+    points: int = 0
 
-match = Match(player1, player2)
-log.info("-- Starting the match --")
-match.play_match()
-log.info(match.celebrate_winner())
+    def win_point(self):
+        """Increments the player's point by 1."""
+        self.points += 1
+
+    def reset_points(self):
+        """Resets the player's points to 0."""
+        self.points = 0
