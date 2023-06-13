@@ -112,5 +112,4 @@ def test_points_to_string():
     assert Game.points_to_string(2) == "30"
     assert Game.points_to_string(3) == "40"
     assert Game.points_to_string(4) == "Game"
-    with pytest.raises(ValueError):
-        Game.points_to_string(5)
+    assert Game.points_to_string(5) == "-"

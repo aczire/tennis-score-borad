@@ -28,6 +28,7 @@ log = logging.getLogger(__name__)
 @dataclass
 class Match:
     """Represents a tournament between two players."""
+    # TODO: Isolate Set and Match to its own components
     player1: Player
     player2: Player
     player1_games: int = 0
@@ -39,6 +40,7 @@ class Match:
     def play_match(self):
         """Simulates a match between the players, consisting of multiple games."""
         # TODO: Separate out game point check and game ##spearation_of_concern
+        # TODO: play_match, play_set, play_game
         while not self.match_over:
             game = Game(self.player1, self.player2)
             log.info("-- starting new game --")
