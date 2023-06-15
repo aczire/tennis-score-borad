@@ -16,6 +16,7 @@ from models.player import Player
 from match import Match
 
 log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 
 PLAYER_ONE = "Player One"
 PLAYER_TWO = "Player Two"
